@@ -1,5 +1,5 @@
 # detect_eyesight
-- Detect eyes sight with machine learning(support vector machine, convolution neural network).
+- Detecting eye sight with machine learning(support vector machine, convolution neural network).
 
 ## SVM
 - Kernel: Polynomial
