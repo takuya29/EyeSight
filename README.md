@@ -5,13 +5,16 @@
 - Kernel: Polynomial
 - Input:  Pixel(32×96)
 - Accuracy: 0.786
-
- ![result](https://github.com/29Takuya/EyeSight/blob/media/output_svm.gif)
+- looking camera -> blue, otherwise -> red
   
+ ![result](https://github.com/29Takuya/EyeSight/blob/media/output_svm.gif)
+ 
+ 
 ## CNN
 - batchsize: 100
 - epoch: 100
 - Accuracy: 80.2
+- looking camera -> blue, otherwise -> red
 ```
 def forward(x_data, y_data, train=True):
     x, t = chainer.Variable(x_data), chainer.Variable(y_data)
