@@ -1,4 +1,7 @@
-# detect_eyesight
+# 日本語の解説記事はこちら
+[OpenFace+機械学習で視線検知](https://qiita.com/29Takuya/items/5c95b2a1fa42975305c9)
+
+# Demonstration
 - Detecting eye sight with machine learning(support vector machine, convolution neural network).
 
 ## SVM
