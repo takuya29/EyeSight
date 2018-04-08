@@ -1,4 +1,4 @@
-# 日本語の解説記事はこちら
+# 日本語の解説記事はこちら(Japanese post is Here.)
 [OpenFace+機械学習で視線検知](https://qiita.com/29Takuya/items/5c95b2a1fa42975305c9)
 
 # Demonstration
