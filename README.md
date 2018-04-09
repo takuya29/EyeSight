@@ -102,10 +102,10 @@ I applied trained models to movie captured by web camera.
 The blue box means the model predicts a person looks camera, and red means otherwise.
 
 ### 1. SVM(Input: Raw Pixel)
-![output_svm.gif](https://qiita-image-store.s3.amazonaws.com/0/170782/de659fbf-fd5c-f930-e4c9-cb9467a4ae1f.gif)
+![result](https://github.com/29Takuya/EyeSight/blob/media/output_svm.gif)
 
 ### 2. CNN
-![output_cnn.gif](https://qiita-image-store.s3.amazonaws.com/0/170782/a812ab3a-103c-0853-0397-0142445bf8cc.gif)
+![result](https://github.com/29Takuya/EyeSight/blob/media/output_cnn.gif)
 
 I had a feeling that CNN model is more stable than another.
 
