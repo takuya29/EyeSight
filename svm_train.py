@@ -42,6 +42,6 @@ clf.fit(X_train, y_train)
 
 from sklearn.externals import joblib
 
-joblib.dump('output/svm_model.pkl', clf.best_estimator_)
+joblib.dump(clf.best_estimator_, 'output/svm_model.pkl')
 
 print(clf.best_params_, clf.best_score_)
