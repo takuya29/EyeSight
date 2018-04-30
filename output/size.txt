@@ -1,0 +1,115 @@
+KeyPoint() size
+
+1 Accuracy: 0.739336492891
+2 Accuracy: 0.748815165877
+3 Accuracy: 0.748815165877
+4 Accuracy: 0.758293838863
+5 Accuracy: 0.763033175355
+6 Accuracy: 0.739336492891
+7 Accuracy: 0.748815165877
+8 Accuracy: 0.758293838863
+9 Accuracy: 0.75355450237
+10 Accuracy: 0.734597156398
+11 Accuracy: 0.701421800948
+12 Accuracy: 0.682464454976
+13 Accuracy: 0.687203791469
+14 Accuracy: 0.715639810427
+15 Accuracy: 0.748815165877
+16 Accuracy: 0.739336492891
+17 Accuracy: 0.710900473934
+18 Accuracy: 0.706161137441
+19 Accuracy: 0.691943127962
+
+
+size = 8
+{'C': 1, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+[mean: 0.74111, std: 0.01660, params: {'kernel': 'linear', 'C': 1},
+ mean: 0.74111, std: 0.01660, params: {'kernel': 'linear', 'C': 10},
+ mean: 0.74111, std: 0.01660, params: {'kernel': 'linear', 'C': 100},
+ mean: 0.74111, std: 0.01660, params: {'kernel': 'linear', 'C': 1000},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 1, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 10, 'gamma': 0.001},
+ mean: 0.41462, std: 0.01293, params: {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 100, 'gamma': 0.001},
+ mean: 0.41462, std: 0.01293, params: {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001},
+ mean: 0.41462, std: 0.01293, params: {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001},
+ mean: 0.78835, std: 0.02402, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 2},
+ mean: 0.78835, std: 0.02402, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.79534, std: 0.03036, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 3},
+ mean: 0.79534, std: 0.03036, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.81320, std: 0.03110, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 4},
+ mean: 0.81320, std: 0.03110, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.78835, std: 0.02402, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 2},
+ mean: 0.78835, std: 0.02402, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.79534, std: 0.03036, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 3},
+ mean: 0.79534, std: 0.03036, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.81320, std: 0.03110, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 4},
+ mean: 0.81320, std: 0.03110, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.78835, std: 0.02402, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 2},
+ mean: 0.78835, std: 0.02402, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.79534, std: 0.03036, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 3},
+ mean: 0.79534, std: 0.03036, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.81320, std: 0.03110, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 4},
+ mean: 0.81320, std: 0.03110, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.78835, std: 0.02402, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 2},
+ mean: 0.78835, std: 0.02402, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.79534, std: 0.03036, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 3},
+ mean: 0.79534, std: 0.03036, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.81320, std: 0.03110, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 4},
+ mean: 0.81320, std: 0.03110, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 1, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 1, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 10, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 10, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 100, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 100, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 1000, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 1000, 'gamma': 0.0001}]
+
+size = 5
+ [mean: 0.78712, std: 0.01283, params: {'kernel': 'linear', 'C': 1},
+ mean: 0.78712, std: 0.01283, params: {'kernel': 'linear', 'C': 10},
+ mean: 0.78712, std: 0.01283, params: {'kernel': 'linear', 'C': 100},
+ mean: 0.78712, std: 0.01283, params: {'kernel': 'linear', 'C': 1000},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 1, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 10, 'gamma': 0.001},
+ mean: 0.40781, std: 0.00854, params: {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 100, 'gamma': 0.001},
+ mean: 0.40781, std: 0.00854, params: {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001},
+ mean: 0.40781, std: 0.00854, params: {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001},
+ mean: 0.81773, std: 0.02727, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 2},
+ mean: 0.81773, std: 0.02727, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.82172, std: 0.02354, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 3},
+ mean: 0.82172, std: 0.02354, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.82744, std: 0.02776, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 4},
+ mean: 0.82744, std: 0.02776, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.81773, std: 0.02727, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 2},
+ mean: 0.81773, std: 0.02727, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.82172, std: 0.02354, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 3},
+ mean: 0.82172, std: 0.02354, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.82744, std: 0.02776, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 4},
+ mean: 0.82744, std: 0.02776, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.81773, std: 0.02727, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 2},
+ mean: 0.81773, std: 0.02727, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.82172, std: 0.02354, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 3},
+ mean: 0.82172, std: 0.02354, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.82744, std: 0.02776, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 4},
+ mean: 0.82744, std: 0.02776, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.81773, std: 0.02727, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 2},
+ mean: 0.81773, std: 0.02727, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.82172, std: 0.02354, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 3},
+ mean: 0.82172, std: 0.02354, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.82744, std: 0.02776, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 4},
+ mean: 0.82744, std: 0.02776, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 1, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 1, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 10, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 10, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 100, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 100, 'gamma': 0.0001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 1000, 'gamma': 0.001},
+ mean: 0.40090, std: 0.00032, params: {'kernel': 'sigmoid', 'C': 1000, 'gamma': 0.0001}]
