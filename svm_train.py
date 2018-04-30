@@ -7,7 +7,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 
-f = open("../input/sift_data/train/train_sift_data5.csv", "rb")
+f = open("./input/sift_data/train/train_sift_data5.csv", "rb")
 list = []
 dataReader = csv.reader(f)
 
@@ -40,5 +40,8 @@ clf = GridSearchCV(SVC(C=1), tuned_parameters, cv=5,
                    scoring='%s_macro' % score)
 clf.fit(X_train, y_train)
 
-# Note the problem is too easy: the hyperparameter plateau is too flat and the
-# output model is the same for precision and recall with ties in quality.
+from sklearn.externals import joblib
+
+joblib.dump('output/svm_model.pkl', clf.best_estimator_)
+
+print(clf.best_params_, clf.best_score_)

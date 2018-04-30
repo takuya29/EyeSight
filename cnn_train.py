@@ -24,13 +24,13 @@ class CNN(Chain):
     def __call__(self, x):
         h = F.max_pooling_2d(F.relu(self.conv1(x)), 2)
         h = F.max_pooling_2d(F.relu(self.conv2(h)), 2)
-        h = F.dropout(F.relu(self.l1(h)), 0.1)
+        h = F.dropout(F.relu(self.l1(h)), 0.2)
         h = self.l2(h)
         return h
 
 
 batchsize = 64
-n_epoch = 30
+n_epoch = 50
 
 df_train = pd.read_csv('./input/raw_data/train_data.csv')
 X = df_train.iloc[:, 2:].astype(np.float32).values
@@ -57,12 +57,12 @@ if gpu_flag >= 0:
     model.to_gpu()
 xp = np if gpu_flag < 0 else cuda.cupy
 
-optimizer = optimizers.MomentumSGD(lr=0.001)
+optimizer = optimizers.MomentumSGD(lr=0.01)
 optimizer.setup(model)
 # 訓練ループ
 start_time = time.clock()
 for epoch in range(1, n_epoch + 1):
-    print "epoch: %d" % epoch
+    print "epoch: %d" % epoch,
 
     perm = np.random.permutation(N)
     sum_loss = 0
@@ -81,7 +81,7 @@ for epoch in range(1, n_epoch + 1):
 
         sum_loss += float(loss.array) * len(x_batch)
 
-    print "train mean loss: %f" % (sum_loss / N)
+    print "train mean loss: %f" % (sum_loss / N),
 
     with chainer.using_config('train', True):
         sum_accuracy = 0
