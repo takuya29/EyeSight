@@ -29,76 +29,77 @@ class CNN(Chain):
         return h
 
 
-batchsize = 64
-n_epoch = 50
+if __name__ == '__main__':
+    batchsize = 64
+    n_epoch = 50
 
-df_train = pd.read_csv('./input/raw_data/train_data.csv')
-X = df_train.iloc[:, 2:].astype(np.float32).values
-y = (df_train.iloc[:, 1].astype(np.int32) - 2).values
+    df_train = pd.read_csv('./input/raw_data/train_data.csv')
+    X = df_train.iloc[:, 2:].astype(np.float32).values
+    y = (df_train.iloc[:, 1].astype(np.int32) - 2).values
 
-X /= X.max()
+    X /= 255.0
 
-# 訓練データとテストデータに分割
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
+    # 訓練データとテストデータに分割
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
 
-N = y_train.size
-N_test = y_test.size
+    N = y_train.size
+    N_test = y_test.size
 
-# 画像を (nsample, channel, height, width) の4次元テンソルに変換
-X_train = X_train.reshape((len(X_train), 1, 32, 96))
-X_test = X_test.reshape((len(X_test), 1, 32, 96))
+    # 画像を (nsample, channel, height, width) の4次元テンソルに変換
+    X_train = X_train.reshape((len(X_train), 1, 32, 96))
+    X_test = X_test.reshape((len(X_test), 1, 32, 96))
 
-model = CNN()
+    model = CNN()
 
-gpu_flag = -1
+    gpu_flag = -1
 
-if gpu_flag >= 0:
-    cuda.get_device_from_id(gpu_flag).use()
-    model.to_gpu()
-xp = np if gpu_flag < 0 else cuda.cupy
+    if gpu_flag >= 0:
+        cuda.get_device_from_id(gpu_flag).use()
+        model.to_gpu()
+    xp = np if gpu_flag < 0 else cuda.cupy
 
-optimizer = optimizers.MomentumSGD(lr=0.01)
-optimizer.setup(model)
-# 訓練ループ
-start_time = time.clock()
-for epoch in range(1, n_epoch + 1):
-    print "epoch: %d" % epoch,
+    optimizer = optimizers.MomentumSGD(lr=0.01)
+    optimizer.setup(model)
+    # 訓練ループ
+    start_time = time.clock()
+    for epoch in range(1, n_epoch + 1):
+        print "epoch: %d" % epoch,
 
-    perm = np.random.permutation(N)
-    sum_loss = 0
-    for i in range(0, N, batchsize):
-        x_batch = Variable(xp.asarray(X_train[perm[i:i + batchsize]]))
-        y_batch = Variable(xp.asarray(y_train[perm[i:i + batchsize]]))
+        perm = np.random.permutation(N)
+        sum_loss = 0
+        for i in range(0, N, batchsize):
+            x_batch = Variable(xp.asarray(X_train[perm[i:i + batchsize]]))
+            y_batch = Variable(xp.asarray(y_train[perm[i:i + batchsize]]))
 
-        model.cleargrads()
+            model.cleargrads()
 
-        loss = F.softmax_cross_entropy(model(x_batch), y_batch)
+            loss = F.softmax_cross_entropy(model(x_batch), y_batch)
 
-        loss.backward()
+            loss.backward()
 
-        optimizer.update()
-        model.cleargrads()
+            optimizer.update()
+            model.cleargrads()
 
-        sum_loss += float(loss.array) * len(x_batch)
+            sum_loss += float(loss.array) * len(x_batch)
 
-    print "train mean loss: %f" % (sum_loss / N),
+        print "train mean loss: %f" % (sum_loss / N),
 
-    with chainer.using_config('train', True):
-        sum_accuracy = 0
-        for i in range(0, N_test, batchsize):
-            x_batch = xp.asarray(X_test[i:i + batchsize])
-            y_batch = xp.asarray(y_test[i:i + batchsize])
+        with chainer.using_config('train', True):
+            sum_accuracy = 0
+            for i in range(0, N_test, batchsize):
+                x_batch = xp.asarray(X_test[i:i + batchsize])
+                y_batch = xp.asarray(y_test[i:i + batchsize])
 
-            acc = F.accuracy(model(x_batch), y_batch, )
-            sum_accuracy += float(acc.data) * len(y_batch)
+                acc = F.accuracy(model(x_batch), y_batch, )
+                sum_accuracy += float(acc.data) * len(y_batch)
 
-    print "test accuracy: %f" % (sum_accuracy / N_test)
+        print "test accuracy: %f" % (sum_accuracy / N_test)
 
-end_time = time.clock()
-print end_time - start_time
+    end_time = time.clock()
+    print end_time - start_time
 
-from chainer.serializers import save_npz
+    from chainer.serializers import save_npz
 
-# CPU環境でも学習済みモデルを読み込めるようにCPUに移してからダンプ
-model.to_cpu()
-save_npz("output/cnn_model.pkl", model)
+    # CPU環境でも学習済みモデルを読み込めるようにCPUに移してからダンプ
+    model.to_cpu()
+    save_npz("output/cnn_model.npz", model)
