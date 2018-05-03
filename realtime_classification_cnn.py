@@ -112,6 +112,7 @@ if __name__ == '__main__':
         help='Capture device. 0 for latop webcam and 1 for usb webcam')
     parser.add_argument('--width', type=int, default=320)
     parser.add_argument('--height', type=int, default=240)
+    parser.add_argument('--fps', type=int, default=5)
     parser.add_argument('--threshold', type=float, default=0.5)
     parser.add_argument('--cuda', action='store_true')
     parser.add_argument('--verbose', action='store_true')
@@ -133,12 +134,17 @@ if __name__ == '__main__':
     video_capture = cv2.VideoCapture(args.captureDevice)
     video_capture.set(3, args.width)
     video_capture.set(4, args.height)
+    video_capture.set(5, args.fps)
+
+    out = cv2.VideoWriter('output/output.avi',
+                          cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), args.fps,
+                          (args.width, args.height))
 
     confidenceList = []
     while True:
         ret, frame = video_capture.read()
         confidences, bbs = infer(frame, args)
-        print (" C: " + str(confidences))
+        # print (" C: " + str(confidences))
         try:
             # append with two floating point precision
             confidenceList.append('%.2f' % confidences[0])
@@ -166,9 +172,11 @@ if __name__ == '__main__':
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
         cv2.imshow('', frame)
+        out.write(frame)
         # quit the program on the press of key 'q'
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     # When everything is done, release the capture
     video_capture.release()
+    out.release()
     cv2.destroyAllWindows()
