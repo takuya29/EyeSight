@@ -1,0 +1,52 @@
+In [1]: clf.best_params_
+Out[1]: {'C': 1, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+
+In [2]: clf.grid_scores_
+Out[2]: 
+[mean: 0.77027, std: 0.02335, params: {'kernel': 'linear', 'C': 1},
+ mean: 0.77027, std: 0.02335, params: {'kernel': 'linear', 'C': 10},
+ mean: 0.77027, std: 0.02335, params: {'kernel': 'linear', 'C': 100},
+ mean: 0.77027, std: 0.02335, params: {'kernel': 'linear', 'C': 1000},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'rbf', 'C': 1, 'gamma': 0.001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'rbf', 'C': 10, 'gamma': 0.001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'rbf', 'C': 100, 'gamma': 0.001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001},
+ mean: 0.81235, std: 0.01893, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 2},
+ mean: 0.81235, std: 0.01893, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.81330, std: 0.01157, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 3},
+ mean: 0.81330, std: 0.01157, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.81159, std: 0.01636, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.001, 'degree': 4},
+ mean: 0.81159, std: 0.01636, params: {'kernel': 'poly', 'C': 1, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.81235, std: 0.01893, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 2},
+ mean: 0.81235, std: 0.01893, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.81330, std: 0.01157, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 3},
+ mean: 0.81330, std: 0.01157, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.81159, std: 0.01636, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.001, 'degree': 4},
+ mean: 0.81159, std: 0.01636, params: {'kernel': 'poly', 'C': 10, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.81235, std: 0.01893, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 2},
+ mean: 0.81235, std: 0.01893, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.81330, std: 0.01157, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 3},
+ mean: 0.81330, std: 0.01157, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.81159, std: 0.01636, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.001, 'degree': 4},
+ mean: 0.81159, std: 0.01636, params: {'kernel': 'poly', 'C': 100, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.81235, std: 0.01893, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 2},
+ mean: 0.81235, std: 0.01893, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 2},
+ mean: 0.81330, std: 0.01157, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 3},
+ mean: 0.81330, std: 0.01157, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 3},
+ mean: 0.81159, std: 0.01636, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.001, 'degree': 4},
+ mean: 0.81159, std: 0.01636, params: {'kernel': 'poly', 'C': 1000, 'gamma': 0.0001, 'degree': 4},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'sigmoid', 'C': 1, 'gamma': 0.001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'sigmoid', 'C': 1, 'gamma': 0.0001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'sigmoid', 'C': 10, 'gamma': 0.001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'sigmoid', 'C': 10, 'gamma': 0.0001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'sigmoid', 'C': 100, 'gamma': 0.001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'sigmoid', 'C': 100, 'gamma': 0.0001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'sigmoid', 'C': 1000, 'gamma': 0.001},
+ mean: 0.53654, std: 0.00114, params: {'kernel': 'sigmoid', 'C': 1000, 'gamma': 0.0001}]
+
+test_ration = 0.1
+Out[16]: {'C': 1, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
